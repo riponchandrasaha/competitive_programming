@@ -15,12 +15,21 @@ int main()
 
     /* b.insert(next(b.begin(),2),b2.begin(),b2.end()); */
     /* b.erase(next(b.begin(), 3)); */
-    //b.erase(next(b.begin(), 2),next(b.begin(), 4));
-    replace(b.begin(), end(),20,15)
+    // b.erase(next(b.begin(), 2),next(b.begin(), 4));
+    /* replace(b.begin(), end(),20,15)
     for (int val : b)
     {
         cout << val << endl;
     }
-
+ */
+    auto it = find(b.begin(), b.end(), 20);
+    if (it == b.end())
+    {
+        cout << "Not found" << endl;
+    }
+    else
+    {
+        cout << "found" << endl;
+    }
     return 0;
 }
