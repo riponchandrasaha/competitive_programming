@@ -30,17 +30,23 @@ bool is_palindrome(Node *head, Node *tail)
 {
     while (head != NULL && tail != NULL && head != tail && head->prev != tail)
     {
-        if (head->val != tail->val)
+        if (head->val == tail->val)
         {
-            return false;
+
+            head = head->next;
+            tail = tail->prev;
+            return true;
         }
         else
         {
-            head = head->next;
-            tail = tail->prev;
+            return false;
         }
 
-        return true;
+        /* else
+        {
+            head = head->next;
+            tail = tail->prev;
+        } */
     }
 }
 void print_list(Node *head)
