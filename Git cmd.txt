@@ -2,3 +2,90 @@
 git add .
 git commit -m "Updated Code"
 git push
+
+
+
+
+
+#C++ snippets
+*****************************************
+
+{
+	
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+	 		"console.log('$1');",
+	 		"$2"
+		],
+	 	"description": ""
+	 },
+	 "1": {
+  "prefix": "cpp",
+  "body": [
+    "#include<bits/stdc++.h>",
+    "using namespace std;",
+    "int main()",
+    "{",
+	"    $0",
+    "    return 0;",
+    "}"
+  ],
+  "description": "Header File"
+},
+
+
+"2": {
+  "prefix": "Node",
+  "body": [
+    "class Node",
+    "{",
+    "public:",
+    "    int val;",
+    "    Node* next;",
+    "    Node(int val)",
+    "    {",
+    "        this->val = val;",
+    "        this->next = NULL;",
+    "    }",
+    "};"
+  ],
+  "description": "Create a singly linked list node class"
+},
+
+"3": {
+  "prefix": "print singly ",
+  "body": [
+    "// Print the singly link list",
+    "void print_list(Node* head) {",
+    "    Node* temp = head;",
+    "    while (temp) {",
+    "        cout << temp->data << \" \";",
+    "        temp = temp->next;",
+    "    }",
+    "    cout << endl;",
+    "}"
+  ],
+  "description": ""
+},
+"4": {
+  "prefix": "insert singly node",
+  "body": [
+    "// Insert singly node at the tail",
+    "void insert_tail(Node*& head, int val) {",
+    "    Node* newNode = new Node(val);",
+    "    if (!head) {",
+    "        head = newNode;",
+    "        return;",
+    "    }",
+    "    Node* temp = head;",
+    "    while (temp->next) {",
+    "        temp = temp->next;",
+    "    }",
+    "    temp->next = newNode;",
+    "}}"
+  ],
+  "description": ""
+}
+
+}
